@@ -1,13 +1,13 @@
-import logo from './logo.svg';
+import profile from './src/profile.jpg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={profile} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          este mi primer hola mundo en react
         </p>
         <a
           className="App-link"
