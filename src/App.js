@@ -1,4 +1,4 @@
-import profile from './src/profile.jpg';
+import profile from './profile.jpg';
 import './App.css';
 
 function App() {
