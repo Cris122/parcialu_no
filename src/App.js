@@ -1,23 +1,48 @@
-import profile from './profile.jpg';
+import { useState } from 'react';
+import profile from './profile.jpeg';
 import './App.css';
 
 function App() {
+  const [showDocs, setShowDocs] = useState(false);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={profile} className="App-logo" alt="logo" />
-        <p>
-          este mi primer hola mundo en react
+      <div className="container">
+
+        <img src={profile} alt="Perfil" className="profile" />
+
+        <p className="text">
+          Alumno Cristian Alfonso Martinez Martinez
         </p>
+
         <a
-          className="App-link"
-          href="https://reactjs.org"
+          href="https://mx.linkedin.com/in/cristian-mtz-2a94a53a4"
           target="_blank"
           rel="noopener noreferrer"
+          className="link"
         >
-          Learn React
+          LINKEDIN DE MI PERFIL
         </a>
-      </header>
+
+        {/* BOTÓN PRINCIPAL */}
+        <button
+          className="main-btn"
+          onClick={() => setShowDocs(!showDocs)}
+        >
+          DOCUMENTACIÓN PARCIAL 1
+        </button>
+
+        {/* PDFs OCULTOS */}
+        {showDocs && (
+          <div className="pdf-buttons">
+            <a href="/pdfs/comandos.pdf" download>COMANDOS BÁSICOS DE REACT</a>
+            <a href="/pdfs/ieee.pdf" download>ISO / ESTÁNDAR IEEE</a>
+            <a href="/pdfs/requerimientos.pdf" download>REQUERIMIENTOS FUNCIONALES Y NO FUNCIONALES</a>
+            <a href="/pdfs/sha_256.pdf" download>CÓDIGO PYTHON ALGORITMO SHA-256</a>
+          </div>
+        )}
+
+      </div>
     </div>
   );
 }
